@@ -1,0 +1,26 @@
+{
+  "name": "react-compose-context-consumers",
+  "version": "0.0.0",
+  "description": "Compose React 16.3 ContextConsumers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mDibyo/react-compose-context-consumers.git"
+  },
+  "keywords": [
+    "react",
+    "react16",
+    "context",
+    "ContextConsumers",
+    "compose"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mDibyo/react-compose-context-consumers/issues"
+  },
+  "homepage": "https://github.com/mDibyo/react-compose-context-consumers#readme"
+}
