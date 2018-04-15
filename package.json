@@ -22,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/mDibyo/react-compose-context-consumers/issues"
   },
-  "homepage": "https://github.com/mDibyo/react-compose-context-consumers#readme"
+  "homepage": "https://github.com/mDibyo/react-compose-context-consumers#readme",
+  "peerDependencies": {
+    "react": "^16.3",
+    "react-dom": "^16.3"
+  }
 }
