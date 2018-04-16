@@ -24,8 +24,7 @@
   },
   "homepage": "https://github.com/mDibyo/react-compose-context-consumers#readme",
   "peerDependencies": {
-    "react": "^16.3",
-    "react-dom": "^16.3"
+    "react": "^16.3"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
