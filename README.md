@@ -1,6 +1,6 @@
 # react-compose-context-consumers
 
-Higher Order Components for composing React's `Context.Consumer`s.
+Higher Order Components for composing React's `Context.Consumer`s. [See it in action!](https://codesandbox.io/s/pmy88rk640)
 
 ### Install
 
