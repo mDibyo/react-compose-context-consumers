@@ -11,6 +11,7 @@ class Compose extends React.PureComponent {
 
   static getDerivedStateFromProps(nextProps, prevState) {
     const { children, ...contextConsumersMap  } = nextProps;
+    // We sort context names to make comparison against previous props simpler.
     const nextSortedContextNames = Object.keys(contextConsumersMap).sort();
     const nextSortedContextConsumers = nextSortedContextNames.map(k => contextConsumersMap[k]);
 
