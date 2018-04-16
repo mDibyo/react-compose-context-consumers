@@ -30,6 +30,20 @@ A component might want to consume multiple contexts:
 This package provides a cleaner and more convenient way to compose `Context.Consumer`s:
 
 ```jsx
+import { Compose } from 'react-compose-context-consumers';
+
+...
+
+<Compose theme={ThemeContext.Consumer} user={UserContext.Consumer}>
+  {({ theme, user }) => (
+    <ProfilePage user={user} theme={theme} />
+  )}
+</Compose>
+```
+
+OR
+
+```jsx
 import compose from 'react-compose-context-consumers';
 
 const Composed = compose(ThemeContext.Consumer, UserContext.Consumer);
@@ -41,16 +55,4 @@ const Composed = compose(ThemeContext.Consumer, UserContext.Consumer);
     <ProfilePage user={user} theme={theme} />
   )}
 </Composed>
-```
-OR
-```jsx
-import { Compose } from 'react-compose-context-consumers';
-
-...
-
-<Compose theme={ThemeContext.Consumer} user={UserContext.Consumer}>
-  {({ theme, user }) => (
-    <ProfilePage user={user} theme={theme} />
-  )}
-</Compose>
 ```
