@@ -1,6 +1,6 @@
 {
   "name": "react-compose-context-consumers",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Compose React 16.3 ContextConsumers",
   "main": "dist/index.js",
   "scripts": {
