@@ -4,6 +4,7 @@
       "modules": false
     }],
     "react",
+    "stage-3",
   ],
   "plugins": ["external-helpers"]
 }
