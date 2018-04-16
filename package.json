@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Compose React 16.3 ContextConsumers",
   "main": "dist/index.js",
+  "module": "dist/index.es.js",
   "scripts": {
     "watch": "rollup --watch -c",
     "build": "rollup -c",
