@@ -20,7 +20,7 @@
     "ContextConsumers",
     "compose"
   ],
-  "author": "",
+  "author": "Dibyo Majumdar <dibyo.majumdar@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mDibyo/react-compose-context-consumers/issues"
