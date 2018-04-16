@@ -22,4 +22,3 @@ function compose(...contextConsumers) {
 }
 
 export default compose;
-
