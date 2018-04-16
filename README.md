@@ -2,6 +2,12 @@
 
 Higher Order Components for composing React's `Context.Consumer`s.
 
+### Install
+
+```bash
+npm install --save react-compose-context-consumers
+```
+
 ### Introduction
 
 React 16.3 added [a new Context API](https://reactjs.org/blog/2018/03/29/react-v-16-3.html#official-context-api) -
