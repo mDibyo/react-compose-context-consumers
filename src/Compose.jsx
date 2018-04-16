@@ -1,22 +1,28 @@
 import React from 'react';
 
 import compose from './compose';
+import { elementsWillChange } from './utils';
 
 class Compose extends React.PureComponent {
   state = {
-    contextKeys: [],
-    Composed: null,
+    sortedContextNames: [],
+    sortedContextConsumers: [],
   };
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    const { children, ...contextConsumersMap } = nextProps;
-    const nextContextKeys = Object.keys(contextConsumersMap);
-    const contextConsumers = nextContextKeys.map(k => contextConsumersMap[k]);
+    const { children, ...contextConsumersMap  } = nextProps;
+    const nextSortedContextNames = Object.keys(contextConsumersMap).sort();
+    const nextSortedContextConsumers = nextSortedContextNames.map(k => contextConsumersMap[k]);
 
-    const Composed = compose(...contextConsumers);
+    if (!elementsWillChange(nextSortedContextNames, prevState.sortedContextNames) &&
+        !elementsWillChange(nextSortedContextConsumers, prevState.sortedContextConsumers)) {
+      return null;
+    }
+
     return {
-      contextKeys: nextContextKeys,
-      Composed,
+      sortedContextNames: nextSortedContextNames,
+      sortedContextConsumers: nextSortedContextConsumers,
+      Composed: compose(...nextSortedContextConsumers),
     };
   }
 
@@ -26,7 +32,7 @@ class Compose extends React.PureComponent {
       <Composed>
         {(...contexts) => {
           const contextsMap = {};
-          this.state.contextKeys.forEach((k, idx) => contextsMap[k] = contexts[idx]);
+          this.state.sortedContextNames.forEach((k, idx) => contextsMap[k] = contexts[idx]);
 
           return this.props.children(contextsMap);
         }}
