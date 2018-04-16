@@ -30,7 +30,7 @@ A component might want to consume multiple contexts:
 This package provides a cleaner and more convenient way to compose `Context.Consumer`s:
 
 ```jsx
-import { Compose } from 'react-compose-context-consumers';
+import Compose from 'react-compose-context-consumers';
 
 ...
 
@@ -44,7 +44,7 @@ import { Compose } from 'react-compose-context-consumers';
 OR
 
 ```jsx
-import compose from 'react-compose-context-consumers';
+import { compose } from 'react-compose-context-consumers';
 
 const Composed = compose(ThemeContext.Consumer, UserContext.Consumer);
 
