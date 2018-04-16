@@ -4,6 +4,7 @@
   "description": "Compose React 16.3 ContextConsumers",
   "main": "dist/index.js",
   "scripts": {
+    "build": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
